@@ -1,15 +1,15 @@
 //
-//  EMSlideOutMenuTests.swift
-//  EMSlideOutMenuTests
+//  EMSlideMenuTests.swift
+//  EMSlideMenuTests
 //
 //  Created by Eduard Moya on 5/12/18.
 //  Copyright © 2018 Eduard Moya. All rights reserved.
 //
 
 import XCTest
-@testable import EMSlideOutMenu
+@testable import EMSlideMenu
 
-class EMSlideOutMenuTests: XCTestCase {
+class EMSlideMenuTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

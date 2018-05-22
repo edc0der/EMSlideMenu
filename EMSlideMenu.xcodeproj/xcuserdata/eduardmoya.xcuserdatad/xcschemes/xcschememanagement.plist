@@ -4,10 +4,23 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>EMSlideOutMenu.xcscheme</key>
+		<key>EMSlideMenu.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>48588E4220A779330099C7F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>48588E5620A779350099C7F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

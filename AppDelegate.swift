@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  EMSlideOutMenu
+//  EMSlideMenu
 //
 //  Created by Eduard Moya on 5/12/18.
 //  Copyright © 2018 Eduard Moya. All rights reserved.
@@ -13,9 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //make sure there's a window
+        window = window ?? UIWindow(frame: UIScreen.main.bounds)
+
+        //create views
+        let mainView: CenterViewController = CenterViewController.loadFromNib()
+        let containerView = EMSlideMenuViewController.create(mainView: mainView, availableSideMenu: .left)
+
+        //set root view controller
+        self.window?.rootViewController = containerView
+        self.window?.makeKeyAndVisible()
         return true
     }
 

@@ -15,7 +15,6 @@
 		48588E4720A779330099C7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48588E4620A779330099C7F0 /* AppDelegate.swift */; };
 		48588E4E20A779350099C7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48588E4D20A779350099C7F0 /* Assets.xcassets */; };
 		48588E5120A779350099C7F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48588E4F20A779350099C7F0 /* LaunchScreen.storyboard */; };
-		48588E5C20A779350099C7F0 /* EMSlideMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48588E5B20A779350099C7F0 /* EMSlideMenuTests.swift */; };
 		48588E6C20A784220099C7F0 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48588E6A20A784220099C7F0 /* SideMenuViewController.swift */; };
 		48588E6D20A784220099C7F0 /* SideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48588E6B20A784220099C7F0 /* SideMenuViewController.xib */; };
 		48588E7020A7869C0099C7F0 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48588E6E20A7869C0099C7F0 /* CenterViewController.swift */; };
@@ -23,16 +22,6 @@
 		4888002F20B3A9860089A9A5 /* EMSlideOutMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4888002E20B3A9860089A9A5 /* EMSlideOutMenuViewController.swift */; };
 		4888003520B3BD6F0089A9A5 /* UIViewController+Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4888003420B3BD6F0089A9A5 /* UIViewController+Instance.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		48588E5820A779350099C7F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 48588E3B20A779330099C7F0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 48588E4220A779330099C7F0;
-			remoteInfo = EMSlideMenu;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		484699DB20B5BBE1009364F4 /* SideMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
@@ -44,9 +33,6 @@
 		48588E4620A779330099C7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48588E4D20A779350099C7F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48588E5020A779350099C7F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		48588E5720A779350099C7F0 /* EMSlideMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EMSlideMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		48588E5B20A779350099C7F0 /* EMSlideMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMSlideMenuTests.swift; sourceTree = "<group>"; };
-		48588E5D20A779350099C7F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48588E6A20A784220099C7F0 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		48588E6B20A784220099C7F0 /* SideMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuViewController.xib; sourceTree = "<group>"; };
 		48588E6E20A7869C0099C7F0 /* CenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
@@ -58,13 +44,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		48588E4020A779330099C7F0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		48588E5420A779350099C7F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -107,7 +86,6 @@
 				48588E4620A779330099C7F0 /* AppDelegate.swift */,
 				48588E4D20A779350099C7F0 /* Assets.xcassets */,
 				4888003C20B3C0180089A9A5 /* Info.plist */,
-				48588E5A20A779350099C7F0 /* EMSlideMenuTests */,
 				48588E4420A779330099C7F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				48588E4320A779330099C7F0 /* EMSlideMenu.app */,
-				48588E5720A779350099C7F0 /* EMSlideMenuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,15 +109,6 @@
 				4888003220B3BD010089A9A5 /* Extensions+Utils */,
 			);
 			path = EMSlideMenu;
-			sourceTree = "<group>";
-		};
-		48588E5A20A779350099C7F0 /* EMSlideMenuTests */ = {
-			isa = PBXGroup;
-			children = (
-				48588E5B20A779350099C7F0 /* EMSlideMenuTests.swift */,
-				48588E5D20A779350099C7F0 /* Info.plist */,
-			);
-			path = EMSlideMenuTests;
 			sourceTree = "<group>";
 		};
 		4888003020B3BC910089A9A5 /* Controller */ = {
@@ -191,24 +159,6 @@
 			productReference = 48588E4320A779330099C7F0 /* EMSlideMenu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		48588E5620A779350099C7F0 /* EMSlideMenuTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 48588E6320A779350099C7F0 /* Build configuration list for PBXNativeTarget "EMSlideMenuTests" */;
-			buildPhases = (
-				48588E5320A779350099C7F0 /* Sources */,
-				48588E5420A779350099C7F0 /* Frameworks */,
-				48588E5520A779350099C7F0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				48588E5920A779350099C7F0 /* PBXTargetDependency */,
-			);
-			name = EMSlideMenuTests;
-			productName = EMSlideMenuTests;
-			productReference = 48588E5720A779350099C7F0 /* EMSlideMenuTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,10 +171,6 @@
 				TargetAttributes = {
 					48588E4220A779330099C7F0 = {
 						CreatedOnToolsVersion = 9.3;
-					};
-					48588E5620A779350099C7F0 = {
-						CreatedOnToolsVersion = 9.3;
-						TestTargetID = 48588E4220A779330099C7F0;
 					};
 				};
 			};
@@ -242,7 +188,6 @@
 			projectRoot = "";
 			targets = (
 				48588E4220A779330099C7F0 /* EMSlideMenu */,
-				48588E5620A779350099C7F0 /* EMSlideMenuTests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,13 +201,6 @@
 				48588E5120A779350099C7F0 /* LaunchScreen.storyboard in Resources */,
 				48588E4E20A779350099C7F0 /* Assets.xcassets in Resources */,
 				48588E7120A7869C0099C7F0 /* CenterViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		48588E5520A779350099C7F0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,23 +224,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		48588E5320A779350099C7F0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				48588E5C20A779350099C7F0 /* EMSlideMenuTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		48588E5920A779350099C7F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 48588E4220A779330099C7F0 /* EMSlideMenu */;
-			targetProxy = 48588E5820A779350099C7F0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		48588E4F20A779350099C7F0 /* LaunchScreen.storyboard */ = {
@@ -466,48 +388,6 @@
 			};
 			name = Release;
 		};
-		48588E6420A779350099C7F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PEDVQ936L6;
-				INFOPLIST_FILE = EMSlideMenuTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.edc0der.EMSlideMenuTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EMSlideMenu.app/EMSlideMenu";
-			};
-			name = Debug;
-		};
-		48588E6520A779350099C7F0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PEDVQ936L6;
-				INFOPLIST_FILE = EMSlideMenuTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.edc0der.EMSlideMenuTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EMSlideMenu.app/EMSlideMenu";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -525,15 +405,6 @@
 			buildConfigurations = (
 				48588E6120A779350099C7F0 /* Debug */,
 				48588E6220A779350099C7F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		48588E6320A779350099C7F0 /* Build configuration list for PBXNativeTarget "EMSlideMenuTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				48588E6420A779350099C7F0 /* Debug */,
-				48588E6520A779350099C7F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

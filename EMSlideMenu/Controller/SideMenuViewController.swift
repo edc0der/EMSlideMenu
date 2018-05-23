@@ -53,6 +53,10 @@ extension SideMenuViewController: UITableViewDataSource {
         cell.textLabel?.text = viewModel.getItemViewModel(atRow: indexPath.row).getTitle()
         return cell
     }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
 }
 
 //MARK:- Table delegate actions

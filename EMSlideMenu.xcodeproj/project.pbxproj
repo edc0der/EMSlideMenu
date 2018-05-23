@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		484699DC20B5BBE1009364F4 /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484699DB20B5BBE1009364F4 /* SideMenuItem.swift */; };
+		484699DE20B5BC05009364F4 /* SideMenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484699DD20B5BC05009364F4 /* SideMenuItemViewModel.swift */; };
+		484699E020B5BC29009364F4 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484699DF20B5BC29009364F4 /* SideMenuViewModel.swift */; };
+		484699E420B5BC9E009364F4 /* SideMenuViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484699E320B5BC9E009364F4 /* SideMenuViewControllerDelegate.swift */; };
+		484699E620B5BD4F009364F4 /* EMSlideMenuViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484699E520B5BD4F009364F4 /* EMSlideMenuViewControllerDelegate.swift */; };
 		48588E4720A779330099C7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48588E4620A779330099C7F0 /* AppDelegate.swift */; };
 		48588E4E20A779350099C7F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48588E4D20A779350099C7F0 /* Assets.xcassets */; };
 		48588E5120A779350099C7F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48588E4F20A779350099C7F0 /* LaunchScreen.storyboard */; };
@@ -30,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		484699DB20B5BBE1009364F4 /* SideMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
+		484699DD20B5BC05009364F4 /* SideMenuItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItemViewModel.swift; sourceTree = "<group>"; };
+		484699DF20B5BC29009364F4 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		484699E320B5BC9E009364F4 /* SideMenuViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewControllerDelegate.swift; sourceTree = "<group>"; };
+		484699E520B5BD4F009364F4 /* EMSlideMenuViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMSlideMenuViewControllerDelegate.swift; sourceTree = "<group>"; };
 		48588E4320A779330099C7F0 /* EMSlideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMSlideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48588E4620A779330099C7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48588E4D20A779350099C7F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +74,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		484699D920B5BB8A009364F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				484699DD20B5BC05009364F4 /* SideMenuItemViewModel.swift */,
+				484699DF20B5BC29009364F4 /* SideMenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		484699DA20B5BBA1009364F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				484699DB20B5BBE1009364F4 /* SideMenuItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		484699E120B5BC5C009364F4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				484699E320B5BC9E009364F4 /* SideMenuViewControllerDelegate.swift */,
+				484699E520B5BD4F009364F4 /* EMSlideMenuViewControllerDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		48588E3A20A779330099C7F0 = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +124,12 @@
 		48588E4520A779330099C7F0 /* EMSlideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				4888003020B3BC910089A9A5 /* Controllers */,
+				484699DA20B5BBA1009364F4 /* Model */,
+				4888003120B3BC9D0089A9A5 /* View */,
+				484699D920B5BB8A009364F4 /* ViewModel */,
+				4888003020B3BC910089A9A5 /* Controller */,
+				484699E120B5BC5C009364F4 /* Protocol */,
 				4888003220B3BD010089A9A5 /* Extensions+Utils */,
-				4888003120B3BC9D0089A9A5 /* Views */,
 			);
 			path = EMSlideMenu;
 			sourceTree = "<group>";
@@ -104,24 +143,24 @@
 			path = EMSlideMenuTests;
 			sourceTree = "<group>";
 		};
-		4888003020B3BC910089A9A5 /* Controllers */ = {
+		4888003020B3BC910089A9A5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				4888002E20B3A9860089A9A5 /* EMSlideOutMenuViewController.swift */,
 				48588E6A20A784220099C7F0 /* SideMenuViewController.swift */,
 				48588E6E20A7869C0099C7F0 /* CenterViewController.swift */,
 			);
-			path = Controllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		4888003120B3BC9D0089A9A5 /* Views */ = {
+		4888003120B3BC9D0089A9A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				48588E4F20A779350099C7F0 /* LaunchScreen.storyboard */,
 				48588E6B20A784220099C7F0 /* SideMenuViewController.xib */,
 				48588E6F20A7869C0099C7F0 /* CenterViewController.xib */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		4888003220B3BD010089A9A5 /* Extensions+Utils */ = {
@@ -234,10 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484699E420B5BC9E009364F4 /* SideMenuViewControllerDelegate.swift in Sources */,
+				484699E020B5BC29009364F4 /* SideMenuViewModel.swift in Sources */,
 				48588E6C20A784220099C7F0 /* SideMenuViewController.swift in Sources */,
 				48588E4720A779330099C7F0 /* AppDelegate.swift in Sources */,
+				484699DC20B5BBE1009364F4 /* SideMenuItem.swift in Sources */,
+				484699DE20B5BC05009364F4 /* SideMenuItemViewModel.swift in Sources */,
 				48588E7020A7869C0099C7F0 /* CenterViewController.swift in Sources */,
 				4888002F20B3A9860089A9A5 /* EMSlideOutMenuViewController.swift in Sources */,
+				484699E620B5BD4F009364F4 /* EMSlideMenuViewControllerDelegate.swift in Sources */,
 				4888003520B3BD6F0089A9A5 /* UIViewController+Instance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

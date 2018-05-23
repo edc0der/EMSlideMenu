@@ -10,13 +10,6 @@ import UIKit
 
 fileprivate let defaultOffset: CGFloat = 80.0
 
-//MARK:- Delegate
-protocol SlideMenuVCDelegate {
-    func toggleLeftPanel()
-    func toggleRightPanel()
-    func collapseSidePanels()
-}
-
 //MARK:- Slide out Menu
 class EMSlideMenuViewController: UIViewController {
     //MARK:- Enums
@@ -61,13 +54,13 @@ class EMSlideMenuViewController: UIViewController {
     private var sidePanelTargetWidth: CGFloat {
         return view.bounds.width - defaultOffset
     }
-    private var availablePanel: SlideMenuSide = .left
     private var currentState: SlideMenuState = .bothCollapsed {
         didSet {
             let shouldShowShadow = currentState != .bothCollapsed
             showShadowForCenterViewController(shouldShowShadow)
         }
     }
+    private var availablePanel: SlideMenuSide = .left
     private var leftPanelIsAvailable: Bool {
         return (availablePanel == .left || availablePanel == .both)
     }
@@ -135,15 +128,15 @@ extension EMSlideMenuViewController {
         slideVC.availablePanel = availableSideMenu
 
         switch availableSideMenu {
-        case .left:
-            slideVC.addLeftBarButton(title: "Left")
-        case .right:
-            slideVC.addRightBarButton(title: "Right")
-        case .both:
-            slideVC.addLeftBarButton(title: "Left")
-            slideVC.addRightBarButton(title: "Right")
-        default:
-            break
+            case .left:
+                slideVC.addLeftBarButton(title: "Left")
+            case .right:
+                slideVC.addRightBarButton(title: "Right")
+            case .both:
+                slideVC.addLeftBarButton(title: "Left")
+                slideVC.addRightBarButton(title: "Right")
+            default:
+                break
         }
 
         return slideVC
@@ -163,6 +156,7 @@ extension EMSlideMenuViewController {
         }
         return CGRect(x: defaultOffset, y: 0.0, width: sidePanelTargetWidth, height: navCenter.view.bounds.height)
     }
+
     private func getSidePanel(forSide side: SlideMenuSide) -> UIViewController? {
         guard side != .none && side != .both else { return nil }
 
@@ -178,6 +172,7 @@ extension EMSlideMenuViewController {
         //Change to "if side == .left {...} else" if a different side menu for each side is needed
         //Configure panel properties here (i.e: add delegate)
         let sidePanel: SideMenuViewController = SideMenuViewController.loadFromNib()
+        sidePanel.delegate = self
 
         return sidePanel
     }
@@ -251,7 +246,7 @@ extension EMSlideMenuViewController {
 }
 
 //MARK:- Setup slide out menu
-extension EMSlideMenuViewController: SlideMenuVCDelegate {
+extension EMSlideMenuViewController: EMSlideMenuViewControllerDelegate {
     typealias SuccessClosure = ((Bool) -> Void)
 
     @objc func toggleLeftPanel() {
@@ -289,7 +284,7 @@ extension EMSlideMenuViewController: SlideMenuVCDelegate {
 //MARK:- Animations
 extension EMSlideMenuViewController {
     private func animateLeftPanel(shouldExpand: Bool) -> Void {
-        guard leftPanelIsAvailable else { return }
+        guard leftPanelIsPresent else { return }
 
         if shouldExpand {
             currentState = .leftPanelExpanded
@@ -306,7 +301,7 @@ extension EMSlideMenuViewController {
     }
 
     private func animateRightPanel(shouldExpand: Bool) -> Void {
-        guard rightPanelIsAvailable else { return }
+        guard rightPanelIsPresent else { return }
 
         if shouldExpand {
             currentState = .rightPanelExpanded
@@ -428,3 +423,9 @@ extension EMSlideMenuViewController: UIGestureRecognizerDelegate {
     }
 }
 
+//MARK:- Side menu delegate
+extension EMSlideMenuViewController: SideMenuViewControllerDelegate {
+    func didSelectSideMenuOption() {
+        collapseSidePanels()
+    }
+}

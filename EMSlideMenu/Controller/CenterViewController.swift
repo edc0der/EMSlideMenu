@@ -9,8 +9,11 @@
 import UIKit
 
 class CenterViewController: UIViewController {
+    //views
+    @IBOutlet private weak var imgBanner: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imgBanner.image = #imageLiteral(resourceName: "IconBannerSlide")
     }
 }

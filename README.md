@@ -38,8 +38,8 @@ So, my solution, at the cost of the simplicity is as follows:
             let maxLeftTranslation: CGFloat = centerX + sidePanelTargetWidth
             let maxRightTranslation: CGFloat = centerX - sidePanelTargetWidth
 
-            let shouldShowLeftSide = translationWillExposeLeftSide && (leftPanelIsAvailable && leftPanelIsPresent)
-            let shouldShowRightSide = translationWillExposeRightSide && (rightPanelIsAvailable && rightPanelIsPresent)
+            let shouldShowLeftSide = translationWillExposeLeftSide && leftPanelIsPresent
+            let shouldShowRightSide = translationWillExposeRightSide && rightPanelIsPresent
 
             if !shouldShowLeftSide && !shouldShowRightSide {
                 translation = view.center.x
@@ -111,7 +111,33 @@ And voila!
 
 ## Nillifying the nillifying
 
-In Ray's side menu, removing the side menu would remove it completely, _removeFromSuperview_ AND set to _nil_. I decided I wouldn't do that, just to not have to re-instance it all every time the side menu is opened. (I'll get back to this.. I'll sleep on it)
+In Ray's slide menu project, removing the side menu would remove it completely, _removeFromSuperview_ AND set to _nil_. I decided I wouldn't do that, to not have to re-instance it every time the side menu is opened. 
+
+However this is all debatable, side menus are going out of use and being changed for TabBar because that way features and functionalities are not hidden by one or two extra touchs, but they are still in use and some apps depend heavily on it's Side menus, meaning that whoever designs an app with a side menu expects the user to normally interact with them.
+
+Anyway, in my case I don't destroy the side menu, I just remove it from superview:
+
+	private func removeLeftPanelViewController() -> Void {
+		vcLeftPanel?.view.removeFromSuperview()
+	}
+
+    private func removeRightPanelViewController() -> Void {
+		vcRightPanel?.view.removeFromSuperview()
+    }
+
+If this is not what you want, you can add there the set to nil line:
+
+	private func removeLeftPanelViewController() -> Void {
+		vcLeftPanel?.view.removeFromSuperview()
+		vcLeftPanel = nil
+	}
+
+    private func removeRightPanelViewController() -> Void {
+		vcRightPanel?.view.removeFromSuperview()
+		vcRightPanel = nil
+    }
+
+Either way, before adding the side panel as a child view controller you're asking if it exists and if not, it's created.
 
 ## That's it
 

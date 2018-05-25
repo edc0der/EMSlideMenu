@@ -210,15 +210,11 @@ extension EMSlideMenuViewController {
     }
 
     private func removeLeftPanelViewController() -> Void {
-        if leftPanelIsPresent {
-            vcLeftPanel?.view.removeFromSuperview()
-        }
+        vcLeftPanel?.view.removeFromSuperview()
     }
 
     private func removeRightPanelViewController() -> Void {
-        if rightPanelIsPresent {
-            vcRightPanel?.view.removeFromSuperview()
-        }
+        vcRightPanel?.view.removeFromSuperview()
     }
 }
 
@@ -370,11 +366,11 @@ extension EMSlideMenuViewController: UIGestureRecognizerDelegate {
         case .began:
             if currentState == .bothCollapsed {
                 if gestureIsFromLeftToRight {
-                    if leftPanelIsAvailable {
+                    if leftPanelIsAvailable && !leftPanelIsPresent {
                         addLeftPanelViewController()
                     }
                 } else {
-                    if rightPanelIsAvailable {
+                    if rightPanelIsAvailable && !rightPanelIsPresent {
                         addRightPanelViewController()
                     }
                 }

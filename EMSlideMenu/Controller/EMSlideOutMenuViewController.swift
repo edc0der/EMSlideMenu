@@ -383,18 +383,16 @@ extension EMSlideMenuViewController: UIGestureRecognizerDelegate {
         case .changed:
             if let rview = recognizer.view {
                 var translation = rview.center.x + recognizer.translation(in: view).x
-
                 let centerX = view.center.x
-                let panelWidth = sidePanelTargetWidth
 
                 let translationWillExposeRightSide = translation < centerX
                 let translationWillExposeLeftSide = translation > centerX
 
-                let maxLeftTranslation: CGFloat = centerX + panelWidth
-                let maxRightTranslation: CGFloat = centerX - panelWidth
+                let maxLeftTranslation: CGFloat = centerX + sidePanelTargetWidth
+                let maxRightTranslation: CGFloat = centerX - sidePanelTargetWidth
 
-                let shouldShowLeftSide = translationWillExposeLeftSide && (leftPanelIsAvailable && leftPanelIsPresent)
-                let shouldShowRightSide = translationWillExposeRightSide && (rightPanelIsAvailable && rightPanelIsPresent)
+                let shouldShowLeftSide = translationWillExposeLeftSide && leftPanelIsPresent
+                let shouldShowRightSide = translationWillExposeRightSide && rightPanelIsPresent
 
                 if !shouldShowLeftSide && !shouldShowRightSide {
                     translation = view.center.x

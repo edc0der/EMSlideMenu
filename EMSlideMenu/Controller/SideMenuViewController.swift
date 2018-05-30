@@ -27,7 +27,7 @@ class SideMenuViewController: UIViewController {
         tblSideMenuOptions.delegate = self
         tblSideMenuOptions.dataSource = self
         //fetch menu options
-        viewModel.setUpMenuOptions(target: self) {
+        viewModel.fetchItems(target: self) {
             self.tblSideMenuOptions.reloadData()
         }
     }
@@ -45,17 +45,13 @@ class SideMenuViewController: UIViewController {
 //MARK:- Table datasource delegate actions
 extension SideMenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getCount()
+        return viewModel.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = viewModel.getItemViewModel(atRow: indexPath.row).getTitle()
+        cell.textLabel?.text = viewModel.getViewModel(atRow: indexPath.row).title
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
     }
 }
 
@@ -63,6 +59,10 @@ extension SideMenuViewController: UITableViewDataSource {
 extension SideMenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.performAction(atRow: indexPath.row)
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
     }
 }
 

@@ -8,22 +8,24 @@
 
 import UIKit
 
-class SideMenuItemViewModel {
+//MARK:- ViewModel
+struct SideMenuItemViewModel {
     var menuItem: SideMenuItem!
 
     init(title: String, image: UIImage?, target: Any, action: Selector) {
         self.menuItem = SideMenuItem(title: title, image: image, target: target, action: action)
     }
+}
 
-    func getIcon() -> UIImage? {
+//MARK:- Protocol-Oriented ViewModel
+extension SideMenuItemViewModel: SideMenuItemViewModelDataSource {
+    var icon: UIImage? {
         return menuItem.icon
     }
-
-    func getTitle() -> String {
+    var title: String {
         return menuItem.title
     }
-
-    func getAction() -> Selector {
+    var action: Selector {
         return menuItem.action
     }
 }

@@ -8,14 +8,13 @@
 
 import UIKit
 
-class SideMenuItem: NSObject {
+struct SideMenuItem {
     var icon: UIImage?
     var title: String!
     var action: Selector!
     var target: Any!
 
     init(title: String, image: UIImage?, target: Any, action: Selector) {
-        super.init()
         self.title = title
         self.icon = image
         self.target = target

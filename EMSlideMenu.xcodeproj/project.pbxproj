@@ -21,6 +21,9 @@
 		48588E7120A7869C0099C7F0 /* CenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48588E6F20A7869C0099C7F0 /* CenterViewController.xib */; };
 		4888002F20B3A9860089A9A5 /* EMSlideOutMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4888002E20B3A9860089A9A5 /* EMSlideOutMenuViewController.swift */; };
 		4888003520B3BD6F0089A9A5 /* UIViewController+Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4888003420B3BD6F0089A9A5 /* UIViewController+Instance.swift */; };
+		48F5F8E620BF43BA00AC5D0D /* SideMenuViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F5F8E520BF43BA00AC5D0D /* SideMenuViewModelDelegate.swift */; };
+		48F5F8E820BF43CD00AC5D0D /* SideMenuItemViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F5F8E720BF43CD00AC5D0D /* SideMenuItemViewModelDataSource.swift */; };
+		48F5F8EA20BF43E100AC5D0D /* SideMenuViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F5F8E920BF43E100AC5D0D /* SideMenuViewModelDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		4888002E20B3A9860089A9A5 /* EMSlideOutMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMSlideOutMenuViewController.swift; sourceTree = "<group>"; };
 		4888003420B3BD6F0089A9A5 /* UIViewController+Instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Instance.swift"; sourceTree = "<group>"; };
 		4888003C20B3C0180089A9A5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48F5F8E520BF43BA00AC5D0D /* SideMenuViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModelDelegate.swift; sourceTree = "<group>"; };
+		48F5F8E720BF43CD00AC5D0D /* SideMenuItemViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItemViewModelDataSource.swift; sourceTree = "<group>"; };
+		48F5F8E920BF43E100AC5D0D /* SideMenuViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModelDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +79,11 @@
 		484699E120B5BC5C009364F4 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				484699E320B5BC9E009364F4 /* SideMenuViewControllerDelegate.swift */,
 				484699E520B5BD4F009364F4 /* EMSlideMenuViewControllerDelegate.swift */,
+				48F5F8E720BF43CD00AC5D0D /* SideMenuItemViewModelDataSource.swift */,
+				484699E320B5BC9E009364F4 /* SideMenuViewControllerDelegate.swift */,
+				48F5F8E920BF43E100AC5D0D /* SideMenuViewModelDataSource.swift */,
+				48F5F8E520BF43BA00AC5D0D /* SideMenuViewModelDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -212,12 +221,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				484699E420B5BC9E009364F4 /* SideMenuViewControllerDelegate.swift in Sources */,
+				48F5F8E620BF43BA00AC5D0D /* SideMenuViewModelDelegate.swift in Sources */,
+				48F5F8EA20BF43E100AC5D0D /* SideMenuViewModelDataSource.swift in Sources */,
 				484699E020B5BC29009364F4 /* SideMenuViewModel.swift in Sources */,
 				48588E6C20A784220099C7F0 /* SideMenuViewController.swift in Sources */,
 				48588E4720A779330099C7F0 /* AppDelegate.swift in Sources */,
 				484699DC20B5BBE1009364F4 /* SideMenuItem.swift in Sources */,
 				484699DE20B5BC05009364F4 /* SideMenuItemViewModel.swift in Sources */,
 				48588E7020A7869C0099C7F0 /* CenterViewController.swift in Sources */,
+				48F5F8E820BF43CD00AC5D0D /* SideMenuItemViewModelDataSource.swift in Sources */,
 				4888002F20B3A9860089A9A5 /* EMSlideOutMenuViewController.swift in Sources */,
 				484699E620B5BD4F009364F4 /* EMSlideMenuViewControllerDelegate.swift in Sources */,
 				4888003520B3BD6F0089A9A5 /* UIViewController+Instance.swift in Sources */,
